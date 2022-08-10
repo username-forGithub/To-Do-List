@@ -64,7 +64,7 @@ npx eslint .
 ```
 
 ## Visit My GitHub Page
- **_Live demo_** https://username-forgithub.github.io/to_do_list/
+ **_Live demo_** https://username-forgithub.github.io/To-Do-List/
 
 ## Author
 👤 **Bakhtiyor Yusubaliyev**
