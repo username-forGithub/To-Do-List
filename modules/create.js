@@ -80,6 +80,3 @@ export function add() {
   updateStorege(arr);
   show();
 }
-
-// localStorage.removeItem('flag')
-// localStorage.removeItem('arrStored')
