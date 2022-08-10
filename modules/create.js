@@ -1,6 +1,24 @@
 import trash from '../src/asset/images/remove.png';
 import dots from '../src/asset/images/dots.png';
 
+let getflag = localStorage.getItem("flag");
+console.log(getflag, typeof getflag);
+if(getflag === null) {
+  let place = [
+    {
+      description: "Car wash",
+      completed: false,
+      index: 0
+    },
+    {
+      description: "Shopping",
+      completed: false,
+      index: 1
+    }
+  ]
+  updateStorege(place);
+}
+localStorage.setItem("flag", "yes");
 let arr = [];
 let taskobj1;
 class Task {
@@ -59,7 +77,11 @@ export function add() {
     arr = [];
   }
   arr.push(taskobj1);
+  console.log(arr, "PUSHED");
   document.querySelector('.add').value = '';
   updateStorege(arr);
   show();
 }
+
+// localStorage.removeItem('flag')
+// localStorage.removeItem('arrStored')
