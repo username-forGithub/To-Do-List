@@ -1,0 +1,133 @@
+body {
+  background-color: rgb(202, 195, 223);
+}
+
+.wrapper {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  border-bottom: 1px solid #000;
+  height: 40px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.add {
+  height: 40px;
+  padding: 0 20px;
+  border: 0;
+  flex-grow: 1;
+}
+
+input {
+  border: none;
+}
+
+input.descrclass {
+  padding: 5px;
+  flex-grow: 1;
+  background-color: transparent;
+}
+
+input.descrclass:focus {
+  outline: none;
+}
+
+input.descrclass.active:focus {
+  outline: 2px solid #000;
+  border-radius: 3px;
+}
+
+.taskcontainer {
+  padding-left: 0;
+  margin: 0;
+}
+
+.taskcontainer li {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  list-style: none;
+  height: 40px;
+  border-bottom: 1px solid #000;
+}
+
+.taskcontainer li.active {
+  background-color: rgb(243, 243, 214);
+}
+
+.title img {
+  margin-left: auto;
+  width: 25px;
+  opacity: 0.6;
+  margin-right: 5px;
+}
+
+.addwrapper {
+  display: flex;
+  align-items: center;
+}
+
+.addwrapper button {
+  margin-left: auto;
+  width: 30px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.addwrapper img {
+  width: 100%;
+}
+
+form {
+  border-bottom: 1px solid #000;
+}
+
+.remall {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+  border: none;
+  background-color: rgb(230, 225, 225);
+}
+
+.remall:focus {
+  outline: none;
+}
+
+.trash {
+  display: none;
+  margin-left: auto;
+  opacity: 0.6;
+  margin-right: 10px;
+  width: 25px;
+}
+
+.dots {
+  width: 18px;
+  margin-left: auto;
+  margin-right: 10px;
+  opacity: 0.6;
+}
+
+.check:checked + input {
+  text-decoration: line-through;
+}
+
+.check:checked ~ .dots {
+  display: none;
+}
+
+.check:checked ~ .trash {
+  display: block;
+}
