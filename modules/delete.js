@@ -1,6 +1,6 @@
 import { getStorege, updateStorege } from './create.js';
 
-let del = () => {
+const del = () => {
   const getContainer = document.querySelector('.taskcontainer');
   getContainer.addEventListener('click', (e) => {
     if (e.target.classList.contains('trash')) {
@@ -24,5 +24,5 @@ let del = () => {
     });
     updateStorege(arr);
   });
-}
+};
 export default del;

@@ -1,9 +1,9 @@
 import trash from '../src/asset/images/remove.png';
 import dots from '../src/asset/images/dots.png';
 
-let updateStorege = (arr) => {
+const updateStorege = (arr) => {
   localStorage.setItem('arrStored', JSON.stringify(arr));
-}
+};
 const getflag = localStorage.getItem('flag');
 if (getflag === null) {
   const place = [
@@ -30,7 +30,7 @@ class Task {
     this.index = index;
   }
 }
-let getStorege = () => {
+const getStorege = () => {
   const locarr = localStorage.getItem('arrStored');
   if (locarr === 'undefined' || locarr === null) {
     return false;
@@ -38,7 +38,7 @@ let getStorege = () => {
     return false;
   }
   return locarr;
-}
+};
 function show() {
   const element = document.querySelector('.taskcontainer');
   let htmlstring = '';
@@ -62,7 +62,7 @@ if (getStorege() !== false) {
   arr = JSON.parse(getStorege());
   show();
 }
-let add = () => {
+const add = () => {
   const addValue = document.querySelector('.add').value;
   const comp = false;
   let ind = 0;
@@ -79,6 +79,6 @@ let add = () => {
   document.querySelector('.add').value = '';
   updateStorege(arr);
   show();
-}
+};
 
 export { add, getStorege, updateStorege };
