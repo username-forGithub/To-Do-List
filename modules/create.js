@@ -80,5 +80,4 @@ const add = () => {
   updateStorege(arr);
   show();
 };
-
 export { add, getStorege, updateStorege };

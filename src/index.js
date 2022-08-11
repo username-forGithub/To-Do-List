@@ -3,7 +3,6 @@ import del from '../modules/delete.js';
 import { add } from '../modules/create.js';
 import update from '../modules/update.js';
 
-// ADD
 const getEnter = document.querySelector('.addwrapper');
 getEnter.addEventListener('submit', (e) => {
   e.preventDefault();
