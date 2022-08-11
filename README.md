@@ -24,11 +24,13 @@ git clone https://github.com/username-forGithub/To-Do-List.git
 ```
 2. Open terminal and cd into project
 ```bash
-cd Portfolio
+
+cd To-Do-List
+
 ```
-3. Open the index.html in your brower:
+3. Command line:
 ```bash
-open index.html
+npm run start
 ```
 
 ### Install
