@@ -1,7 +1,7 @@
 import trash from '../src/asset/images/remove.png';
 import dots from '../src/asset/images/dots.png';
 
-export function updateStorege(arr) {
+let updateStorege = (arr) => {
   localStorage.setItem('arrStored', JSON.stringify(arr));
 }
 const getflag = localStorage.getItem('flag');
@@ -30,7 +30,7 @@ class Task {
     this.index = index;
   }
 }
-export function getStorege() {
+let getStorege = () => {
   const locarr = localStorage.getItem('arrStored');
   if (locarr === 'undefined' || locarr === null) {
     return false;
@@ -62,7 +62,7 @@ if (getStorege() !== false) {
   arr = JSON.parse(getStorege());
   show();
 }
-export function add() {
+let add = () => {
   const addValue = document.querySelector('.add').value;
   const comp = false;
   let ind = 0;
@@ -80,3 +80,5 @@ export function add() {
   updateStorege(arr);
   show();
 }
+
+export { add, getStorege, updateStorege };
