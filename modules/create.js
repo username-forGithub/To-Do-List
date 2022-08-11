@@ -44,9 +44,16 @@ function show() {
   let htmlstring = '';
   if (localStorage.getItem('arrStored') && localStorage.getItem('arrStored') !== 'false') {
     arr.forEach((item) => {
+      let ifCompleted = '';
+      let ifActive = '';
+      if (item.completed) {
+        ifCompleted = 'checked';
+        ifActive = 'active';
+      }
+
       let string = `
-        <li>
-        <input type="checkbox" class="check" name="" id="${item.index}">
+        <li class="${ifActive}">
+        <input type="checkbox" class="check" ${ifCompleted}  id="${item.index}">
         <input class="descrclass" type="text" value="${item.description}">
         <img class="trash" src="${trash}">
         <img class="dots" src="${dots}">
