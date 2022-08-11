@@ -21,6 +21,25 @@ const update = () => {
     if (e.target.classList.contains('descrclass')) {
       e.target.blur();
     }
+    if (e.target.classList.contains('check')) {
+      e.target.addEventListener('change', (ev) => {
+        ev.stopImmediatePropagation();
+        const getId = e.target.id;
+        const getChecked = e.target.checked;
+        const arr = JSON.parse(getStorege());
+        arr.forEach((item) => {
+          if (item.index === Number(getId)) {
+            if (getChecked) {
+              item.completed = true;
+            } else {
+              item.completed = false;
+            }
+            updateStorege(arr);
+          }
+        });
+      });
+    }
   });
 };
+
 export default update;

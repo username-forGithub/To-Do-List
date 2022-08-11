@@ -25,4 +25,5 @@ const del = () => {
     updateStorege(arr);
   });
 };
+
 export default del;
