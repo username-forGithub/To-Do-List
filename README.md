@@ -24,7 +24,9 @@ git clone https://github.com/username-forGithub/To-Do-List.git
 ```
 2. Open terminal and cd into project
 ```bash
+
 cd To-Do-List
+
 ```
 3. Command line:
 ```bash
